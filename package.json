@@ -13,6 +13,9 @@
   "dependencies": {
     "@chrysb/alphaclaw": "0.9.37"
   },
+  "overrides": {
+    "openclaw": "2026.11.3"
+  },
   "engines": {
     "node": ">=26.1.0"
   }
