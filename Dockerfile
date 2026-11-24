@@ -10,10 +10,10 @@ RUN npm install --omit=dev --prefer-online && npm cache clean --force
 # ── gbrain: the engine the stock alert (and later the agent) reach the Supabase brain through ──
 # bun is gbrain's runtime (bun-native, needs >=1.4). Pinned to the laptop's gbrain version so two
 # clients sharing one Supabase brain don't fight over schema migrations. These are the exact
-# commands proven working in this container on 2026-11-14. Config + the single-writer lock live on
+# commands proven working in this container on 2026-11-14 (version bumped to match the laptop on 2026-11-24). Config + the single-writer lock live on
 # /data (GBRAIN_HOME, the Render persistent disk) so they survive rebuilds; the binary ships in the
 # image so a redeploy can't wipe it.
-RUN npm install -g bun && bun install -g github:garrytan/gbrain#v0.60.405.0
+RUN npm install -g bun && bun install -g github:garrytan/gbrain#v0.60.769.0
 ENV GBRAIN_HOME=/data/.gbrain
 
 # ── Self-heal the onboard flow ─────────────────────────────────────────────
